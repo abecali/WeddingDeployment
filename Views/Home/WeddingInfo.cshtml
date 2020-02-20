@@ -1,0 +1,15 @@
+@model Wedding
+
+
+ <!-- this logis setup is after contollers -->
+
+
+
+<h1>@Model.WedderOne & @Model.WedderTwo 's Wedding | <a href="/dashboard" class="btn btn-primary">Dashboard</a> <a href="/logout" class="btn btn-danger">Log Out</a> </h1>
+
+<h2>Date: @Model.Date</h2>
+<h2>Guests:</h2>
+@foreach(var association in Model.Associations)
+{
+    <h4>@association.Guest.FirstName</h4>
+}
